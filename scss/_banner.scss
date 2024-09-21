@@ -1,0 +1,203 @@
+.banner .container {
+  display: flex;
+  align-items: center;
+  padding: 0 0 5rem 0;
+  column-gap: 8rem;
+  position: relative;
+  flex-wrap: wrap;
+
+  @media only screen and (max-width: $bp-large) {
+    flex-direction: column;
+    align-items: start;
+    gap: 0rem;
+    padding: 0;
+  }
+
+  .banner__left {
+    flex: 0 0 40%;
+
+    @media only screen and (max-width: $bp-large) {
+      width: 100%;
+      padding-top: 8rem;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+      padding-top: 4rem;
+    }
+
+    &-line {
+      width: 6rem;
+      height: 5px;
+      border-radius: 2rem;
+      background-color: $--color-secondary;
+      margin-bottom: 2.5rem;
+    }
+
+    &-subtext {
+      font-size: 2.5rem;
+      margin-bottom: 2.6rem;
+    }
+
+    &-description {
+      font-size: 2.2rem;
+      margin-bottom: 8rem;
+
+      @media only screen and (max-width: $bp-large) {
+        margin-bottom: 0;
+      }
+    }
+
+    &-container {
+      display: flex;
+      flex-direction: column;
+      order: 1;
+      flex: 0 0 50%;
+      margin-top: -16rem;
+
+      @media only screen and (max-width: $bp-large) {
+        margin: 0;
+        width: 100%;
+      }
+    }
+
+    &-group {
+      display: flex;
+      align-items: center;
+      margin-bottom: 12rem;
+      flex-wrap: wrap;
+
+      @media only screen and (max-width: $bp-large) {
+        margin-bottom: 8rem;
+      }
+
+      @media only screen and (max-width: $bp-small) {
+        justify-content: center;
+        margin-bottom: 0;
+      }
+
+      div {
+        display: flex;
+        gap: 5rem;
+
+        @media only screen and (max-width: $bp-small) {
+          width: 100%;
+          justify-content: center;
+        }
+
+        :nth-child(2) {
+          fill: $--color-primary;
+        }
+      }
+
+      &-btn:link,
+      &-btn:visited {
+        display: inline-block;
+        font-size: 1.8rem;
+        font-weight: 700;
+        padding: 1.8rem 5rem;
+        color: #fff;
+        background-color: $--color-secondary;
+        text-decoration: none;
+        border-radius: 1rem;
+        margin-right: 8rem;
+        transition: all 0.3s;
+        backface-visibility: hidden;
+
+        @media only screen and (max-width: $bp-small) {
+          padding: 1.8rem 8rem;
+          margin-right: 0;
+          margin-bottom: 2.2rem;
+        }
+      }
+
+      &-btn:hover,
+      &-btn:active {
+        background-color: #3b3b54;
+        box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.4);
+        transform: scale(1.01);
+      }
+
+      &-btn:active {
+        transform: scale(0.99) translateY(0.3rem);
+        box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.3);
+      }
+
+      &-link {
+      }
+
+      &-icon {
+        height: 3rem;
+        width: 3rem;
+      }
+    }
+
+    &-social-link {
+      font-size: 2.2rem;
+
+      @media only screen and (max-width: $bp-small) {
+        order: -1;
+        margin-bottom: 4rem;
+        text-align: center;
+      }
+
+      &-fb,
+      &-insta,
+      &-tw {
+        text-decoration: none;
+        color: inherit;
+        padding: 0.4rem;
+      }
+
+      &-insta {
+        color: $--color-primary;
+      }
+    }
+  }
+
+  .banner__right {
+    display: flex;
+    flex: 1;
+    gap: 4rem;
+
+    div {
+      @media only screen and (max-width: $bp-large) {
+        text-align: center;
+      }
+    }
+
+    &-img {
+      width: 100%;
+
+      @media only screen and (max-width: $bp-big) {
+        width: 100%;
+      }
+    }
+  }
+
+  &::after {
+    display: inline-block;
+    content: "";
+    width: 40rem;
+    height: 40rem;
+    background-image: linear-gradient(
+      to bottom,
+      rgba(243, 247, 250, 0.2),
+      rgb(255, 255, 255)
+    );
+    position: absolute;
+    top: -2%;
+    right: -38%;
+    border-radius: 4rem;
+    transform: rotate(35deg);
+    z-index: -1;
+
+    @media only screen and (max-width: $bp-large) {
+      top: 50%;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      right: -50%;
+      top: 60%;
+    }
+  }
+}

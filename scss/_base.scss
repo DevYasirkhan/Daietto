@@ -1,0 +1,61 @@
+/////  COLORS  /////
+
+$--color-primary: #6cc57c;
+
+$--color-secondary: #23233c;
+
+$--color-grey: #7f8da0;
+
+$--color-red: #f42f2f;
+
+/////  MEDIA QUERRY  /////
+
+$bp-largest: 75em; // 1200px / 16px = 75em;
+$bp-large: 59.37em; // 950px / 16px = 59.37em;
+$bp-big: 50em; // 800px  / 16px = 50em;
+$bp-biggy: 43.75em; // 700  / 16px = 43.75;
+$bp-medium: 37.5em; // 600px  / 16px = 37.5em;
+$bp-small: 31.25em; // 500px  / 16px = 31.25em;
+$bp-smallest: 25em; // 400px  / 16px = 25em;
+
+///// BASIC  /////
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%; // 10px / 16px = 62.5%   1rem = 10px;
+  box-sizing: border-box;
+  overflow-x: hidden;
+
+  @media only screen and (max-width: $bp-largest) {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-family: googlesans, sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: $--color-grey;
+  line-height: 1.2;
+  background-color: #f2f6ff;
+  padding: 0 4rem;
+  overflow-x: hidden;
+}
+
+@font-face {
+  font-family: googlesans;
+  src: url(../img/font/ProductSans-Regular.woff);
+}
+
+.container {
+  max-width: 130rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+}

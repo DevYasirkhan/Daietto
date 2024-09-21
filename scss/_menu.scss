@@ -1,0 +1,194 @@
+.menu .container {
+  display: flex;
+  gap: 10rem;
+  padding: 15rem 0 6rem 0;
+  position: relative;
+  flex-wrap: wrap;
+
+  @media only screen and (max-width: $bp-large) {
+    padding: 8rem 0 10rem 0;
+  }
+
+  .menu__left {
+    flex: 1;
+    padding: 4rem 0;
+    display: flex;
+    gap: 10rem;
+    flex-wrap: wrap;
+
+    @media only screen and (max-width: $bp-large) {
+      flex: 0 0 100%;
+      justify-content: space-around;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+      flex-direction: column;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    &-item {
+      width: 22rem;
+      background-color: #f2f6ff;
+      padding: 0 2rem 5rem 2rem;
+      border-top-left-radius: 25rem;
+      border-top-right-radius: 25rem;
+      border-bottom-left-radius: 5rem;
+      border-bottom-right-radius: 5rem;
+      box-shadow: 0 2.5rem 5rem rgba(0, 0, 0, 0.1);
+      position: relative;
+
+      @media only screen and (max-width: $bp-large) {
+        width: 31rem;
+      }
+
+      @media only screen and (max-width: $bp-biggy) {
+        width: 55%;
+        padding: 0 4rem 5rem 4rem;
+      }
+
+      @media only screen and (max-width: $bp-small) {
+        width: 65%;
+      }
+
+      &:nth-child(1) {
+        transform: translateY(-9rem);
+      }
+
+      &:nth-child(2) {
+        transform: translateY(3rem);
+      }
+
+      &-img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        margin-bottom: -2rem;
+        box-shadow: 0 1.2rem 1rem rgba(58, 58, 58, 0.2);
+        transition: rotate 0.5s;
+        transform: translateY(-5rem);
+
+        @media only screen and (max-width: $bp-large) {
+          transform: translateY(-7rem);
+        }
+
+        // @media only screen and (max-width: $bp-biggy) {
+        //   height: 90%;
+        //   width: 90%;
+        // }
+      }
+
+      &-link,
+      &-link:link,
+      &-link:visited {
+        display: inline-block;
+        width: 4.5rem;
+        height: 4.5rem;
+        background-color: $--color-secondary;
+        fill: #fff;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.2s;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+      }
+
+      &-link:hover,
+      &-link:active {
+        background-color: $--color-red;
+        color: #fff;
+      }
+
+      &-link:hover .menu__left-item-icon {
+        transform: rotate(-45deg);
+        backface-visibility: hidden;
+      }
+
+      &-icon {
+        width: 2rem;
+        height: 2rem;
+        transition: all 0.3s;
+      }
+    }
+
+    &-nutrition {
+      display: flex;
+      gap: 2.5rem;
+
+      &-item {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        &-value {
+          font-size: 2rem;
+          font-weight: 700;
+          color: $--color-secondary;
+
+          span {
+            color: $--color-red;
+          }
+        }
+
+        &-label {
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+
+  .menu__right {
+    flex: 0 0 42%;
+
+    @media only screen and (max-width: $bp-large) {
+      order: -1;
+      margin-bottom: 10rem;
+      flex: 0 0 100%;
+    }
+
+    &-line {
+      width: 6rem;
+      height: 5px;
+      background-color: $--color-secondary;
+      border-radius: 2rem;
+      margin-bottom: 2.5rem;
+    }
+
+    &-description {
+      font-size: 2.2rem;
+    }
+  }
+
+  &:after {
+    display: inline-block;
+    content: "";
+    width: 25rem;
+    height: 25rem;
+
+    background-image: linear-gradient(
+      to bottom,
+      rgba(243, 247, 250, 0.2),
+      rgb(255, 255, 255)
+    );
+    position: absolute;
+    top: 28%;
+    right: -28%;
+    border-radius: 50%;
+    z-index: -1;
+
+    // @media only screen and (max-width: $bp-largest) {
+    //   top: 30%;
+    //   right: -20%;
+    // }
+
+    @media only screen and (max-width: $bp-big) {
+      right: -30%;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+      display: none;
+    }
+  }
+}
