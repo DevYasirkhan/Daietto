@@ -8,13 +8,13 @@
 
   @media only screen and (max-width: $bp-large) {
     flex-direction: column;
-    align-items: start;
     gap: 0rem;
     padding: 0;
   }
 
   .banner__left {
     flex: 0 0 40%;
+    padding-top: 12rem;
 
     @media only screen and (max-width: $bp-large) {
       width: 100%;
@@ -23,6 +23,11 @@
 
     @media only screen and (max-width: $bp-medium) {
       padding-top: 4rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      display: flex;
+      flex-direction: column;
     }
 
     &-line {
@@ -41,23 +46,6 @@
     &-description {
       font-size: 2.2rem;
       margin-bottom: 8rem;
-
-      @media only screen and (max-width: $bp-large) {
-        margin-bottom: 0;
-      }
-    }
-
-    &-container {
-      display: flex;
-      flex-direction: column;
-      order: 1;
-      flex: 0 0 50%;
-      margin-top: -16rem;
-
-      @media only screen and (max-width: $bp-large) {
-        margin: 0;
-        width: 100%;
-      }
     }
 
     &-group {
@@ -73,6 +61,7 @@
       @media only screen and (max-width: $bp-small) {
         justify-content: center;
         margin-bottom: 0;
+        order: 2;
       }
 
       div {
@@ -122,9 +111,6 @@
         box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.3);
       }
 
-      &-link {
-      }
-
       &-icon {
         height: 3rem;
         width: 3rem;
@@ -135,9 +121,9 @@
       font-size: 2.2rem;
 
       @media only screen and (max-width: $bp-small) {
-        order: -1;
         margin-bottom: 4rem;
         text-align: center;
+        order: 1;
       }
 
       &-fb,
@@ -171,6 +157,10 @@
       @media only screen and (max-width: $bp-big) {
         width: 100%;
       }
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      flex-direction: column;
     }
   }
 

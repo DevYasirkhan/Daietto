@@ -300,9 +300,6 @@ header {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: start;
     gap: 0rem;
     padding: 0;
   }
@@ -311,6 +308,7 @@ header {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 40%;
           flex: 0 0 40%;
+  padding-top: 12rem;
 }
 @media only screen and (max-width: 59.37em) {
   .banner .container .banner__left {
@@ -321,6 +319,17 @@ header {
 @media only screen and (max-width: 37.5em) {
   .banner .container .banner__left {
     padding-top: 4rem;
+  }
+}
+@media only screen and (max-width: 31.25em) {
+  .banner .container .banner__left {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 .banner .container .banner__left-line {
@@ -337,33 +346,6 @@ header {
 .banner .container .banner__left-description {
   font-size: 2.2rem;
   margin-bottom: 8rem;
-}
-@media only screen and (max-width: 59.37em) {
-  .banner .container .banner__left-description {
-    margin-bottom: 0;
-  }
-}
-.banner .container .banner__left-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-ordinal-group: 2;
-      -ms-flex-order: 1;
-          order: 1;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 50%;
-          flex: 0 0 50%;
-  margin-top: -16rem;
-}
-@media only screen and (max-width: 59.37em) {
-  .banner .container .banner__left-container {
-    margin: 0;
-    width: 100%;
-  }
 }
 .banner .container .banner__left-group {
   display: -webkit-box;
@@ -387,6 +369,9 @@ header {
         -ms-flex-pack: center;
             justify-content: center;
     margin-bottom: 0;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
   }
 }
 .banner .container .banner__left-group div {
@@ -450,11 +435,11 @@ header {
 }
 @media only screen and (max-width: 31.25em) {
   .banner .container .banner__left-social-link {
-    -webkit-box-ordinal-group: 0;
-        -ms-flex-order: -1;
-            order: -1;
     margin-bottom: 4rem;
     text-align: center;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
   }
 }
 .banner .container .banner__left-social-link-fb, .banner .container .banner__left-social-link-insta, .banner .container .banner__left-social-link-tw {
@@ -485,6 +470,14 @@ header {
 @media only screen and (max-width: 50em) {
   .banner .container .banner__right-img {
     width: 100%;
+  }
+}
+@media only screen and (max-width: 31.25em) {
+  .banner .container .banner__right {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 .banner .container::after {
