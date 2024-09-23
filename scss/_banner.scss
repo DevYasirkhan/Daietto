@@ -1,28 +1,32 @@
+.banner {
+  padding: 7rem 4rem 10rem 4rem;
+
+  @media only screen and (max-width: $bp-big) {
+    padding-bottom: 6rem;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    padding-bottom: 2rem;
+  }
+}
+
 .banner .container {
   display: flex;
   align-items: center;
-  padding: 0 0 5rem 0;
-  column-gap: 8rem;
+  justify-content: space-between;
   position: relative;
-  flex-wrap: wrap;
 
-  @media only screen and (max-width: $bp-large) {
+  @media only screen and (max-width: $bp-biggy) {
     flex-direction: column;
-    gap: 0rem;
-    padding: 0;
+    gap: 3rem;
   }
 
   .banner__left {
-    flex: 0 0 40%;
-    padding-top: 12rem;
+    width: 42%;
+    position: relative;
 
-    @media only screen and (max-width: $bp-large) {
+    @media only screen and (max-width: $bp-biggy) {
       width: 100%;
-      padding-top: 8rem;
-    }
-
-    @media only screen and (max-width: $bp-medium) {
-      padding-top: 4rem;
     }
 
     @media only screen and (max-width: $bp-small) {
@@ -30,13 +34,13 @@
       flex-direction: column;
     }
 
-    &-line {
-      width: 6rem;
-      height: 5px;
-      border-radius: 2rem;
-      background-color: $--color-secondary;
-      margin-bottom: 2.5rem;
-    }
+    // &-line {
+    //   width: 6rem;
+    //   height: 5px;
+    //   border-radius: 2rem;
+    //   background-color: $--color-secondary;
+    //   margin-bottom: 2.5rem;
+    // }
 
     &-subtext {
       font-size: 2.5rem;
@@ -46,22 +50,46 @@
     &-description {
       font-size: 2.2rem;
       margin-bottom: 8rem;
+
+      @media only screen and (max-width: $bp-large) {
+        margin-bottom: 6rem;
+      }
+
+      @media only screen and (max-width: $bp-small) {
+        margin-bottom: 3rem;
+      }
     }
 
     &-group {
       display: flex;
       align-items: center;
       margin-bottom: 12rem;
-      flex-wrap: wrap;
+      justify-content: space-between;
+      width: 80%;
 
       @media only screen and (max-width: $bp-large) {
-        margin-bottom: 8rem;
+        margin-bottom: 7rem;
+        width: 100%;
+      }
+
+      @media only screen and (max-width: $bp-biggy) {
+        width: 62%;
       }
 
       @media only screen and (max-width: $bp-small) {
-        justify-content: center;
-        margin-bottom: 0;
-        order: 2;
+        display: none;
+      }
+
+      &-display {
+        display: none;
+
+        @media only screen and (max-width: $bp-small) {
+          display: block;
+          text-align: center;
+          width: 100%;
+          order: 2;
+          margin-bottom: 0;
+        }
       }
 
       div {
@@ -88,7 +116,7 @@
         background-color: $--color-secondary;
         text-decoration: none;
         border-radius: 1rem;
-        margin-right: 8rem;
+        // margin-right: 8rem;
         transition: all 0.3s;
         backface-visibility: hidden;
 
@@ -121,9 +149,17 @@
       font-size: 2.2rem;
 
       @media only screen and (max-width: $bp-small) {
-        margin-bottom: 4rem;
-        text-align: center;
-        order: 1;
+        display: none;
+      }
+
+      &-display {
+        display: none;
+
+        @media only screen and (max-width: $bp-small) {
+          display: block;
+          order: 1;
+          margin-bottom: 1.5rem;
+        }
       }
 
       &-fb,
@@ -141,9 +177,11 @@
   }
 
   .banner__right {
-    display: flex;
-    flex: 1;
-    gap: 4rem;
+    width: 56%;
+
+    @media only screen and (max-width: $bp-biggy) {
+      width: 100%;
+    }
 
     div {
       @media only screen and (max-width: $bp-large) {

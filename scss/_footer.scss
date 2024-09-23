@@ -1,56 +1,63 @@
-footer .container {
-  padding: 12rem 2rem 10rem 2rem;
-  display: flex;
-  align-items: start;
-  justify-content: space-between;
-  position: relative;
-  flex-wrap: wrap;
+footer {
+  padding: 12rem 4rem 10rem 4rem;
 
-  @media only screen and (max-width: $bp-big) {
-    padding: 12rem 0 10rem 0;
-  }
-
-  @media only screen and (max-width: $bp-medium) {
+  @media only screen and (max-width: $bp-biggy) {
     padding-top: 8rem;
+  }
+}
+
+footer .container {
+  position: relative;
+
+  .footer-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin-bottom: 6rem;
+    flex-wrap: wrap;
+
+    @media only screen and (max-width: $bp-biggy) {
+      row-gap: 3rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   .footer-logo {
-    @media only screen and (max-width: $bp-large) {
-      flex: 1;
+    @media only screen and (max-width: $bp-biggy) {
+      width: 100%;
     }
 
-    @media only screen and (max-width: $bp-medium) {
-      flex: 0 0 100%;
+    @media only screen and (max-width: $bp-small) {
       display: flex;
       justify-content: center;
-      margin-bottom: 4rem;
     }
   }
 
   .ul-container {
-    margin-bottom: 6rem;
     display: flex;
-    gap: 14rem;
+    justify-content: space-between;
+    width: 40%;
 
-    @media only screen and (max-width: $bp-large) {
-      flex: 0 0 60%;
+    @media only screen and (max-width: $bp-big) {
+      gap: 4rem;
     }
 
-    @media only screen and (max-width: $bp-medium) {
+    @media only screen and (max-width: $bp-biggy) {
       order: 1;
-      flex: 0 0 100%;
-      justify-content: space-between;
-      gap: 0;
-      margin-bottom: 4rem;
+      width: 60%;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      width: 100%;
     }
   }
 
   .footer__list {
     list-style: none;
-
-    @media only screen and (max-width: $bp-medium) {
-      flex: 0 0 40%;
-    }
 
     &-item {
       padding: 1.2rem;
@@ -78,24 +85,21 @@ footer .container {
   }
 
   .footer__link {
-    width: 25rem;
-
     @media only screen and (max-width: $bp-large) {
-      order: 2;
-      flex: 0 0 40%;
-
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
     }
 
-    @media only screen and (max-width: $bp-medium) {
-      order: 1;
-      flex: 0 0 100%;
-      margin-bottom: 4rem;
+    @media only screen and (max-width: $bp-biggy) {
+      order: 2;
+      width: 40%;
     }
 
+    @media only screen and (max-width: $bp-small) {
+      width: 100%;
+    }
     &-icon {
       margin-bottom: 6rem;
       display: flex;
@@ -151,18 +155,17 @@ footer .container {
       rgb(255, 255, 255)
     );
     position: absolute;
-    top: -150%;
+    top: -280%;
     right: -25%;
     border-radius: 4rem;
     transform: rotate(-21deg);
     z-index: -1;
 
-    @media only screen and (max-width: $bp-big) {
-      top: -130%;
-      right: -40%;
+    @media only screen and (max-width: $bp-biggy) {
+      top: -200%;
     }
 
-    @media only screen and (max-width: $bp-medium) {
+    @media only screen and (max-width: $bp-small) {
       display: none;
     }
   }
@@ -170,16 +173,6 @@ footer .container {
 
 .copyright {
   font-size: 2.2rem;
-  order: 1;
   width: 100%;
-
-  @media only screen and (max-width: $bp-large) {
-    width: 60%;
-    align-self: flex-end;
-  }
-
-  @media only screen and (max-width: $bp-medium) {
-    text-align: center;
-    width: 100%;
-  }
+  text-align: center;
 }

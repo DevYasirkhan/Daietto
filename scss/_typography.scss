@@ -9,6 +9,19 @@
   span {
     color: $--color-primary;
   }
+
+  &::before {
+    display: inline-block;
+    content: "";
+    position: absolute;
+    top: -2.8rem;
+    left: 0;
+    width: 6rem;
+    height: 5px;
+    border-radius: 2rem;
+    background-color: $--color-secondary;
+    margin-bottom: 2.5rem;
+  }
 }
 
 .heading-2 {
@@ -19,6 +32,19 @@
 
   span {
     color: $--color-primary;
+  }
+
+  &::before {
+    display: inline-block;
+    content: "";
+    position: absolute;
+    top: -2.8rem;
+    left: 0;
+    width: 6rem;
+    height: 5px;
+    border-radius: 2rem;
+    background-color: $--color-secondary;
+    margin-bottom: 2.5rem;
   }
 }
 

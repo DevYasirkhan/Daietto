@@ -1,30 +1,48 @@
+.menu {
+  padding: 10rem 4rem;
+
+  @media only screen and (max-width: $bp-big) {
+    padding: 8rem 4rem;
+  }
+
+  @media only screen and (max-width: $bp-biggy) {
+    padding-top: 4rem;
+  }
+}
+
 .menu .container {
   display: flex;
-  gap: 10rem;
-  padding: 15rem 0 6rem 0;
+  align-items: center;
+  justify-content: space-between;
   position: relative;
-  flex-wrap: wrap;
 
-  @media only screen and (max-width: $bp-large) {
-    padding: 8rem 0 10rem 0;
+  @media only screen and (max-width: $bp-big) {
+    flex-direction: column-reverse;
+    gap: 12rem;
   }
 
   .menu__left {
-    flex: 1;
-    padding: 4rem 0;
+    width: 42%;
     display: flex;
-    gap: 10rem;
-    flex-wrap: wrap;
+    justify-content: space-between;
 
     @media only screen and (max-width: $bp-large) {
-      flex: 0 0 100%;
+      width: 50%;
+    }
+
+    @media only screen and (max-width: $bp-big) {
+      width: 100%;
       justify-content: space-around;
     }
 
     @media only screen and (max-width: $bp-medium) {
+      justify-content: space-between;
+    }
+
+    @media only screen and (max-width: $bp-small) {
       flex-direction: column;
-      gap: 4rem;
       align-items: center;
+      gap: 12rem;
     }
 
     &-item {
@@ -38,25 +56,28 @@
       box-shadow: 0 2.5rem 5rem rgba(0, 0, 0, 0.1);
       position: relative;
 
-      @media only screen and (max-width: $bp-large) {
-        width: 31rem;
-      }
-
-      @media only screen and (max-width: $bp-biggy) {
-        width: 55%;
-        padding: 0 4rem 5rem 4rem;
+      @media only screen and (max-width: $bp-big) {
+        width: 26rem;
       }
 
       @media only screen and (max-width: $bp-small) {
-        width: 65%;
+        width: 28rem;
       }
 
       &:nth-child(1) {
-        transform: translateY(-9rem);
+        transform: translateY(-5rem);
+
+        @media only screen and (max-width: $bp-big) {
+          transform: translateY(0);
+        }
       }
 
       &:nth-child(2) {
-        transform: translateY(3rem);
+        transform: translateY(6rem);
+
+        @media only screen and (max-width: $bp-big) {
+          transform: translateY(0);
+        }
       }
 
       &-img {
@@ -69,13 +90,8 @@
         transform: translateY(-5rem);
 
         @media only screen and (max-width: $bp-large) {
-          transform: translateY(-7rem);
+          transform: translateY(-6rem);
         }
-
-        // @media only screen and (max-width: $bp-biggy) {
-        //   height: 90%;
-        //   width: 90%;
-        // }
       }
 
       &-link,
@@ -140,20 +156,15 @@
   }
 
   .menu__right {
-    flex: 0 0 42%;
+    width: 48%;
+    position: relative;
 
     @media only screen and (max-width: $bp-large) {
-      order: -1;
-      margin-bottom: 10rem;
-      flex: 0 0 100%;
+      width: 40%;
     }
 
-    &-line {
-      width: 6rem;
-      height: 5px;
-      background-color: $--color-secondary;
-      border-radius: 2rem;
-      margin-bottom: 2.5rem;
+    @media only screen and (max-width: $bp-big) {
+      width: 100%;
     }
 
     &-description {
@@ -166,29 +177,21 @@
     content: "";
     width: 25rem;
     height: 25rem;
-
-    background-image: linear-gradient(
-      to bottom,
-      rgba(243, 247, 250, 0.2),
-      rgb(255, 255, 255)
-    );
+    background-color: #d0f0d6;
     position: absolute;
     top: 28%;
     right: -28%;
     border-radius: 50%;
     z-index: -1;
 
-    // @media only screen and (max-width: $bp-largest) {
-    //   top: 30%;
-    //   right: -20%;
-    // }
-
     @media only screen and (max-width: $bp-big) {
-      right: -30%;
+      right: -25%;
+      top: 5%;
     }
 
     @media only screen and (max-width: $bp-medium) {
-      display: none;
+      right: -35%;
+      top: 10%;
     }
   }
 }
